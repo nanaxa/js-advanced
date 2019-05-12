@@ -381,3 +381,19 @@ footer article {
     padding: 10px;
     color: #ccc;
 }
+.goods-item a {
+    text-decoration: none;
+    color: white;
+    display: block;  
+    background-color: #FE8018;
+    width:100px;
+    margin: 0 auto;
+    border-radius: 4px;
+    padding: 3px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-family: "Raleway";
+}
+.goods-item a:hover {
+    background-color: #f3740d;
+}
