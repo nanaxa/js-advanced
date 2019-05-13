@@ -142,7 +142,18 @@ class GoodsList {
           })
           document.querySelector('.goods-list').innerHTML = listHtml;
              }
+        
+    totalSum() { 
+        let totalSum = 0;
+        this.goods.forEach((good) => {
+        if(good.price !==undefined) {
+            totalSum+=good.price;
+            }
+        })
+      console.log("Суммарная стоимость товаров " + totalSum + " рублей")   
+    }
 }
 const list = new GoodsList();
 list.fetchGoods();
 list.render();
+list.totalSum();
