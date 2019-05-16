@@ -65,13 +65,14 @@ const renderGoodsList = (list) => {
 renderGoodsList(goods)
 */
 
-// Объявляем новый класс
-class GoodsItem {
+// Объявляем новый класс Goodsitem
+class GoodsItem {  //создаем конструктор функцию с св-вами title option price
     constructor(title="Без имени", option="Нет в продаже", price="Последняя  1000$") {
-        this.title = title;
+        this.title = title; //переменные для обращения к св-вам этого объекта
         this.option = option;
         this.price = price;
     }
+    //метод рендер генерирующий html разметку
     render() {
         return `<div class="goods-item">
     <h3>${this.title}</h3>
@@ -82,10 +83,13 @@ class GoodsItem {
   </div>`;
     }
 }
+//создаем класс
 class GoodsList {
+    //конструктор в нем пустой массив
     constructor() {
         this.goods = [];
     }
+    //метод наполняющий массив данными
     fetchGoods()  {
         this.goods = [
         {
@@ -134,6 +138,7 @@ class GoodsList {
     }
         ];
     }
+    
     render() {
         let listHtml = '';
         this.goods.forEach(good => {
